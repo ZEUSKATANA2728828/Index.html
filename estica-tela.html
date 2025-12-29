@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estica Tela (Mais FPS) - Script/Executores</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Script/Executores</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="readme.html">README</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="warning-modal" class="modal">
+            <div class="modal-content">
+                <h2>⚠️ Aviso Legal</h2>
+                <p>O uso de scripts pode envolver riscos, incluindo possíveis punições em jogos.</p>
+                <p>Ao continuar, você aceita total responsabilidade pelo uso deste conteúdo.</p>
+                <p>O criador deste site não se responsabiliza por consequências do uso indevido.</p>
+                <div class="modal-buttons">
+                    <button id="accept-btn" class="btn btn-accept">ACEITAR</button>
+                    <button id="refuse-btn" class="btn btn-refuse">RECUSAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="script-content" class="hidden">
+            <h1>Estica Tela (Mais FPS)</h1>
+            
+            <div class="script-box">
+                <pre id="script-code">getgenv().Resolution = { [".gg/scripters"] = 0.65 }
+local Camera = workspace.CurrentCamera
+if getgenv().gg_scripters == nil then
+game:GetService("RunService").RenderStepped:Connect(
+function()
+Camera.CFrame = Camera.CFrame * CFrame.new(0, 0, 0, 1, 0, 0, 0, getgenv().Resolution [".gg/scripters"], 0, 0, 0, 1)
+end
+)
+end
+getgenv().gg_scripters = "Aori0001"</pre>
+            </div>
+
+            <button id="copy-btn" class="btn btn-copy">COPIAR SCRIPT</button>
+            <p id="copy-feedback" class="copy-feedback hidden">✓ Script copiado!</p>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
